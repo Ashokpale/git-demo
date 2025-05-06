@@ -83,4 +83,11 @@ public class StudentController {
     	return studentRepository.queryAllStudents();
     }
     
+    @GetMapping("/students/department")
+    public List<Student> getStudentsByDepartment(@RequestParam String department) {
+        return studentRepository.findByDepartment(department);
+    }
+
+
+    
 }

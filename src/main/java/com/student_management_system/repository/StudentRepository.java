@@ -18,12 +18,11 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 	
 	List<String> findByName(String name);
 
-	@Query("Select s from student  s ")
+	@Query("Select s from Student  s ")
 	List<Student> queryAllStudents();
 	
 	
-
-	List<Student> getDepartment(String department);
+	List<Student> findByDepartment(String department);
 	
 
 
